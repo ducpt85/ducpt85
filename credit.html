@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Pham Tran Duc resume</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+
+    <link href="ducpt.css" rel="stylesheet" />
+    
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required.</b></p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+<div id="impress">
+    <div id="PhamTranDuc" class="step" data-x="3000" data-y="-1000" data-z="3000" data-rotate="-90" data-rotate-x="15" data-scale="1.7">
+        <p>Pham Tran Duc<br/>
+        <span class="email">ducpt85@gmail.com</span>
+        </p>
+    </div>
+</div>
+
+<script src="js/impress.js"></script>
+<script>
+ 	var impress = impress();
+ 	impress.init();
+
+	document.addEventListener('impress:stepenter', function(e){
+		if (typeof timing !== 'undefined') clearInterval(timing);
+		var duration = (e.target.getAttribute('data-transition-duration') ? e.target.getAttribute('data-transition-duration') : 3000); // use the set duration or fallback to 2000ms
+		timing = setInterval(impress.next, duration);
+	});
+
+</script>
+</body>
+</html>
