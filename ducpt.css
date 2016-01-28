@@ -219,6 +219,22 @@ a:focus {
     background-repeat: no-repeat;
 }
 
+#TechnicalSkill {
+    width: 700px;
+    padding-top: 100px;
+}
+
+#WorkExperience {
+    width: 700px;
+    padding-top: 100px;
+}
+
+.table {
+	width: 690px;
+	font-size: 18px;
+    line-height: 30px;
+}
+
 #big {
     width: 600px;
     text-align: center;
@@ -565,7 +581,7 @@ a:focus {
 /*
     ... and we will show it when the first step (with id 'bored') is active.
 */
-.impress-on-bored .hint {
+.impress-on-PhamTranDuc .hint {
     /*
         We remove the transparency and position the hint in its default fixed
         position.
